@@ -1,0 +1,61 @@
+{
+  "env": {
+    "node": true,
+    "browser": true,
+    "commonjs": true,
+    "es2021": true
+  },
+  "extends": ["eslint:recommended", "prettier"],
+  "plugins": ["prettier"],
+  "parserOptions": {
+    "ecmaVersion": 12
+  },
+  "rules": {
+    "prettier/prettier": "error",
+    "arrow-parens": "off",
+    "object-curly-newline": "off",
+    "no-mixed-operators": "off",
+    "arrow-body-style": "off",
+    "function-paren-newline": "off",
+    "no-plusplus": "off",
+    "semi": ["error", "never"],
+    "space-before-function-paren": 0,
+    "max-len": [
+      "error",
+      100,
+      2,
+      {
+        "ignoreUrls": true,
+        "ignoreRegExpLiterals": true,
+        "ignoreTemplateLiterals": true
+      }
+    ],
+    "no-console": 1,
+    "no-alert": "error",
+    "no-param-reassign": "off",
+    "radix": 1,
+    "prefer-destructuring": "off",
+    "no-useless-concat": "error",
+    "prefer-template": ["error", 1],
+    "quotes": ["error", "backtick"],
+    "no-shadow": 0,
+    "no-multi-spaces": 2,
+    "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 1 }],
+    "no-irregular-whitespace": 2,
+    "camelcase": [2, { "properties": "always" }],
+    "no-var": 2,
+    "prefer-arrow-callback": 1,
+    "prefer-spread": 1,
+    "no-trailing-spaces": [2, { "skipBlankLines": true }],
+    "babel/new-cap": 0,
+    "prefer-const": [
+      "error",
+      {
+        "destructuring": "all",
+        "ignoreReadBeforeAssign": false
+      }
+    ],
+    "no-unused-vars": ["error", { "argsIgnorePattern": "next" }],
+    "no-negated-condition": 0
+  }
+}
