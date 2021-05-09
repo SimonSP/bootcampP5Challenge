@@ -9,6 +9,11 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Passenger.belongsTo(models.Flight, {
+        as: 'flight',
+        foreignKey: 'flightId',
+        target: 'id',
+      })
       Passenger.hasMany(models.Baggage, {
         as: 'baggage',
         foreignKey: 'passengerId',
@@ -18,7 +23,8 @@ module.exports = (sequelize, DataTypes) => {
   }
   Passenger.init(
     {
-      description: DataTypes.STRING,
+      firstName: DataTypes.STRING,
+      lastName: DataTypes.STRING,
     },
     {
       sequelize,

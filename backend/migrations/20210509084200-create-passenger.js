@@ -14,6 +14,13 @@ module.exports = {
       lastName: {
         type: Sequelize.STRING,
       },
+      flightId: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Flights',
+          key: 'id',
+        },
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
