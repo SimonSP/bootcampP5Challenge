@@ -19,11 +19,6 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: `passengerId`,
         as: `flights`,
       })
-      Passenger.hasMany(models.Baggage, {
-        as: 'baggage',
-        foreignKey: 'passengerId',
-        target: 'id',
-      })
     }
   }
   Passenger.init(
