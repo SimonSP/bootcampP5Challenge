@@ -1,6 +1,6 @@
-const baggageTypeControllers = require(`./baggage`)
+const baggageTypeControllers = require(`./baggageType`)
 const baggageStatusControllers = require(`./baggageStatus`)
-const baggageControllers = require(`./baggageType`)
+const baggageControllers = require(`./baggage`)
 
 module.exports = {
   ...baggageControllers,
