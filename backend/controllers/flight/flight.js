@@ -4,10 +4,9 @@ const Boom = require('@hapi/boom')
 async function getFlights(req, res, next) {
   try {
     const flights = await models.Flight.findAll()
-    return res.json({
+    return res.status(200).json({
       success: true,
-      status: 200,
-      flights,
+      data: flights,
     })
   } catch (error) {
     return next(error)
