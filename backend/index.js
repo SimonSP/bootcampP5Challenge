@@ -3,21 +3,31 @@ const cors = require('cors')
 const morgan = require('morgan')
 const express = require('express')
 const router = require('./routes')
+const { errorHandler, wrapErrors } = require(`./middlewares/errorHandling`)
 
 /* EXPRESS INSTANCE */
 const app = express()
 
-app.disable('x-powered-by') //DESACTIVA X-POWERED-BY: EXPRESSJS
+//DISABLE HEADER X-POWERED-BY: EXPRESSJS
+app.disable('x-powered-by')
 
-app.use(cors()) //PERMITE ACCESO EXTERNO
+//EXTERN CROSS DOMAIN ACCESS
+app.use(cors())
 
 app.use(express.urlencoded({ extended: true }))
 
-app.use(express.json()) //EX BODY PARSER
+//EX BODY PARSER
+app.use(express.json())
 
-app.use(morgan('dev')) //LOGGER
+//LOGGER
+app.use(morgan('dev'))
 
+//ROUTER
 app.use('/api/v1', router)
+
+//ERROR HANDLERS
+app.use(wrapErrors)
+app.use(errorHandler)
 
 const port = process.env.PORT || 4000
 app.listen(port, () => {

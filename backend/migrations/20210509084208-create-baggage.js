@@ -1,7 +1,7 @@
 'use strict'
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('PassengerHasBaggage', {
+    await queryInterface.createTable('Baggage', {
       uuid: {
         allowNull: false,
         primaryKey: true,
@@ -18,7 +18,7 @@ module.exports = {
       description: {
         type: Sequelize.STRING,
       },
-      baggageType: {
+      baggageTypeId: {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
@@ -26,7 +26,7 @@ module.exports = {
           key: 'id',
         },
       },
-      baggageStatus: {
+      baggageStatusId: {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
@@ -45,6 +45,6 @@ module.exports = {
     })
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('PassengerHasBaggage')
+    await queryInterface.dropTable('Baggage')
   },
 }

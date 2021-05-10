@@ -9,6 +9,11 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      BaggageType.hasMany(models.Baggage, {
+        as: 'baggage',
+        foreignKey: 'baggageTypeId',
+        target: 'id',
+      })
     }
   }
   BaggageType.init(

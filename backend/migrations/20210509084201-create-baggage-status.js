@@ -1,5 +1,4 @@
 'use strict'
-//TODO: MIGRACIONES NO ESTAN FUNCIONANDO
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable('BaggageStatuses', {

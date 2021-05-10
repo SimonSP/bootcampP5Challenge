@@ -4,16 +4,17 @@
   "description": "Examen propuesto por Plataforma 5, para ingresar al Bootcamp II",
   "main": "index.js",
   "scripts": {
-    "db:create": "npx sequelize db:create",
-    "db:migrate": "npx sequelize db:migrate",
-    "db:seed": "npx sequelize db:seed:all",
+    "db:create": "npx sequelize-cli db:create",
+    "db:migrate": "npx sequelize-cli db:migrate",
+    "db:seed": "npx sequelize-cli db:seed:all",
     "start": "node index.js",
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "nodejs",
-    "expressjs"
+    "expressjs",
+    "pgsql"
   ],
   "author": "Simon Salvo Pino",
   "license": "ISC",
