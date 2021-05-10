@@ -6,6 +6,7 @@ import { ThemeProvider } from './context'
 import esEs from 'antd/es/locale/es_ES'
 import GlobalStyle from './globalStyle'
 import 'antd/es/message/style/index.css'
+import { Table, Container } from 'components'
 
 function App() {
   return (
@@ -26,6 +27,12 @@ function App() {
               Learn React TESTING
             </a>
           </header>
+          <Container backgroundColor="primary.1" color="white">
+            kawljdawldj
+          </Container>
+          <Container>
+            <Table width="50%" columns={[]} dataSource={[]} />
+          </Container>
         </div>
       </ConfigProvider>
 
