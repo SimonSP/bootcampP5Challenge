@@ -1,6 +1,4 @@
 'use strict'
-const moment = require('moment')
-const { v4: uuidv4 } = require('uuid')
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable('Baggage', {
