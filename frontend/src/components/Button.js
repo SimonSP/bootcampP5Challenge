@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import 'antd/es/button/style/index.css'
 import {
   compose,
   space,
