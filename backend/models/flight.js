@@ -19,14 +19,14 @@ module.exports = (sequelize, DataTypes) => {
   Flight.init(
     {
       code: DataTypes.STRING,
-      from: Sequelize.STRING,
-      to: Sequelize.STRING,
-      plannedDepartureDate: Sequelize.DATE,
-      boardingDate: Sequelize.DATE,
-      departureDate: Sequelize.DATE,
-      arrivalDate: Sequelize.DATE,
-      maxPassengers: Sequelize.INTEGER,
-      minPassengers: Sequelize.INTEGER,
+      from: DataTypes.STRING,
+      to: DataTypes.STRING,
+      plannedDepartureDate: DataTypes.DATE,
+      boardingDate: DataTypes.DATE,
+      departureDate: DataTypes.DATE,
+      arrivalDate: DataTypes.DATE,
+      maxPassengers: DataTypes.INTEGER,
+      minPassengers: DataTypes.INTEGER,
     },
     {
       sequelize,

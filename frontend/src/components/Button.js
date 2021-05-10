@@ -31,6 +31,7 @@ const ButtonWrapper = styled(`button`)(
 )
 
 ButtonWrapper.defaultProps = {
+  padding: `2`,
   color: `white`,
   border: `none`,
   maxWidth: `100%`,

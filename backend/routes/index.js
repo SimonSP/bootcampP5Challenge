@@ -2,9 +2,9 @@ const express = require('express')
 const router = express.Router()
 
 //IMPORTING SUBROUTERS
-//const PassengerRouter = require('./passenger.js')
+const FlightsRouter = require('./flight')
 
 //USING ROUTERS
-//Router.use('/passenger', PassengerRouter)
+router.use('/flight', FlightsRouter)
 
 module.exports = router

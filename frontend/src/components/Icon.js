@@ -1,6 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
+  faSuitcase as suitcase,
   faArrowCircleLeft as circleLeft,
   faArrowLeft as left,
   faArrowRight as right,
@@ -37,8 +38,6 @@ import {
   faTimes as times,
   faEdit as edit,
   faChevronUp as chevronUp,
-  faQrcode as qr,
-  faKeyboard as keyboard,
   faEye as eye,
   faMinus as minus,
 } from '@fortawesome/free-solid-svg-icons'
@@ -54,6 +53,7 @@ import {
   border,
 } from 'styled-system'
 const icons = {
+  suitcase,
   at,
   circleLeft,
   left,
@@ -90,8 +90,6 @@ const icons = {
   userTimes,
   times,
   chevronUp,
-  qr,
-  keyboard,
   eye,
   minus,
 }
