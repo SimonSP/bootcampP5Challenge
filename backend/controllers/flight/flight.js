@@ -1,4 +1,4 @@
-const models = require('../models')
+const models = require('../../models')
 const Boom = require('@hapi/boom')
 
 async function getFlights(req, res, next) {
