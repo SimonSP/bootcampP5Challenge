@@ -73,6 +73,25 @@ const getColumns = (onManage, onFastManage) => [
   {
     title: `Entregar equipaje`,
     render(record) {
+      const { baggage = null } = record
+      if (baggage && baggage.every((item) => item.baggageStatusId === 2)) {
+        return (
+          <Icon fontSize="3" icon="check" color="success" marginRight="3" />
+        )
+      } else if (
+        baggage &&
+        baggage.every((item) => item.baggageStatusId === 3)
+      ) {
+        return (
+          <Icon
+            fontSize="3"
+            icon="truckLoading"
+            color="warning"
+            marginRight="3"
+            onClick={() => onFastManage(record, 2)}
+          />
+        )
+      }
       return (
         <Icon
           fontSize="3"
@@ -87,11 +106,21 @@ const getColumns = (onManage, onFastManage) => [
   {
     title: `Marcar como olvidado`,
     render(record) {
+      const { baggage = null } = record
+      if (baggage && baggage.every((item) => item.baggageStatusId === 2)) {
+        return <Icon fontSize="3" icon="minus" color="gray.1" marginRight="3" />
+      } else if (
+        baggage &&
+        baggage.every((item) => item.baggageStatusId === 3)
+      ) {
+        return <Icon fontSize="3" icon="check" color="error" marginRight="3" />
+      }
       return (
         <Icon
           fontSize="3"
           icon="forgotten"
           color="error"
+          marginRight="3"
           onClick={() => onFastManage(record, 3)}
         />
       )
