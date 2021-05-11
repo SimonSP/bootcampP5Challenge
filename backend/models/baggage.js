@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
       Baggage.belongsTo(models.PassengerHasFlight, {
         foreignKey: 'passengerHasFlightId',
         target: 'id',
-        as: 'passengerHasFlight',
+        as: 'passengerHasFlights',
       })
       Baggage.belongsTo(models.BaggageType, {
         foreignKey: 'baggageTypeId',

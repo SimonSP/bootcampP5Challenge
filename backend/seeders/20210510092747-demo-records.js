@@ -1,7 +1,6 @@
 'use strict'
 
 const moment = require('moment')
-const { v4: uuidv4 } = require('uuid')
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
@@ -17,7 +16,7 @@ module.exports = {
     const defaultFlights = [
       {
         id: 1,
-        code: `A1DS1`,
+        code: `A1D01`,
         from: `Chile SCL`,
         to: `Argentina EZE`,
         plannedDepartureDate: moment().subtract(2, `hours`).format(),
@@ -28,7 +27,7 @@ module.exports = {
       },
       {
         id: 2,
-        code: `A1DS2`,
+        code: `A1D02`,
         from: `Chile`,
         to: `Argentina`,
         plannedDepartureDate: moment().add(4, `hours`).format(),
@@ -38,7 +37,7 @@ module.exports = {
       },
       {
         id: 3,
-        code: `A1DS3`,
+        code: `A1D03`,
         from: `Chile`,
         to: `Argentina`,
         plannedDepartureDate: moment().add(2, `hours`).format(),
@@ -48,7 +47,7 @@ module.exports = {
       },
       {
         id: 4,
-        code: `A1DS4`,
+        code: `A1D04`,
         from: `Chile`,
         to: `Argentina`,
         plannedDepartureDate: moment().subtract(2, `hours`).format(),
@@ -60,7 +59,7 @@ module.exports = {
       },
       {
         id: 5,
-        code: `A1DS5`,
+        code: `A1D05`,
         from: `Chile`,
         to: `Argentina`,
         plannedDepartureDate: moment().add(3, `hours`).format(),
@@ -70,11 +69,51 @@ module.exports = {
       },
       {
         id: 6,
-        code: `A1DS6`,
+        code: `A1D06`,
         from: `Chile`,
         to: `Argentina`,
         plannedDepartureDate: moment().add(5, `hours`).format(),
         boardingDate: moment().add(4, `hours`).format(),
+        maxPassengers: 100,
+        minPassengers: 50,
+      },
+      {
+        id: 7,
+        code: `A1D07`,
+        from: `Chile`,
+        to: `Argentina`,
+        plannedDepartureDate: moment().add(6, `hours`).format(),
+        boardingDate: moment().add(5, `hours`).format(),
+        maxPassengers: 100,
+        minPassengers: 50,
+      },
+      {
+        id: 8,
+        code: `A1D08`,
+        from: `Chile`,
+        to: `Argentina`,
+        plannedDepartureDate: moment().add(20, `hours`).format(),
+        boardingDate: moment().add(19, `hours`).format(),
+        maxPassengers: 100,
+        minPassengers: 50,
+      },
+      {
+        id: 9,
+        code: `A1D09`,
+        from: `Chile`,
+        to: `Argentina`,
+        plannedDepartureDate: moment().add(15, `hours`).format(),
+        boardingDate: moment().add(14, `hours`).format(),
+        maxPassengers: 100,
+        minPassengers: 50,
+      },
+      {
+        id: 10,
+        code: `A1D10`,
+        from: `Chile`,
+        to: `Argentina`,
+        plannedDepartureDate: moment().add(20, `hours`).format(),
+        boardingDate: moment().add(19, `hours`).format(),
         maxPassengers: 100,
         minPassengers: 50,
       },
@@ -114,63 +153,54 @@ module.exports = {
     ])
     await queryInterface.bulkInsert('Baggage', [
       {
-        uuid: uuidv4(),
         passengerHasFlightId: 1,
         description: `zapatos`,
         baggageTypeId: 1,
-        baggageStatusId: 1,
+        baggageStatusId: 2,
       },
       {
-        uuid: uuidv4(),
         passengerHasFlightId: 1,
         description: `cartera`,
         baggageTypeId: 2,
-        baggageStatusId: 1,
+        baggageStatusId: 2,
       },
       {
-        uuid: uuidv4(),
         passengerHasFlightId: 1,
         description: `maleta`,
         baggageTypeId: 3,
-        baggageStatusId: 1,
+        baggageStatusId: 2,
       },
       {
-        uuid: uuidv4(),
         passengerHasFlightId: 2,
         description: `chaqueta`,
         baggageTypeId: 1,
         baggageStatusId: 2,
       },
       {
-        uuid: uuidv4(),
         passengerHasFlightId: 2,
         description: `bolso de mano`,
         baggageTypeId: 2,
         baggageStatusId: 2,
       },
       {
-        uuid: uuidv4(),
         passengerHasFlightId: 2,
         description: `maleta`,
         baggageTypeId: 3,
         baggageStatusId: 2,
       },
       {
-        uuid: uuidv4(),
         passengerHasFlightId: 3,
         description: `poleron`,
         baggageTypeId: 1,
         baggageStatusId: 1,
       },
       {
-        uuid: uuidv4(),
         passengerHasFlightId: 3,
         description: `mochila`,
         baggageTypeId: 2,
         baggageStatusId: 1,
       },
       {
-        uuid: uuidv4(),
         passengerHasFlightId: 3,
         description: `maleta`,
         baggageTypeId: 3,

@@ -6,7 +6,7 @@ async function getBaggageTypes(req, res, next) {
     const baggageTypes = await models.BaggageType.findAll()
     return res.status(200).json({
       success: true,
-      data: baggageTypes,
+      data: { baggageTypes },
     })
   } catch (error) {
     return next(error)

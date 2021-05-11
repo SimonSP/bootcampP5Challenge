@@ -10,12 +10,12 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       PassengerHasFlight.belongsTo(models.Passenger, {
-        as: 'passengers',
+        as: 'passenger',
         foreignKey: 'passengerId',
         target: 'id',
       })
       PassengerHasFlight.belongsTo(models.Flight, {
-        as: `flights`,
+        as: `flight`,
         foreignKey: `flightId`,
         target: 'id',
       })
@@ -27,7 +27,14 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   PassengerHasFlight.init(
-    {},
+    {
+      id: {
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true,
+        allowNull: false,
+      },
+    },
     {
       sequelize,
       modelName: 'PassengerHasFlight',

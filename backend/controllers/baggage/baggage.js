@@ -13,13 +13,26 @@ async function getBaggage(req, res, next) {
   }
 }
 
+async function getBaggageAux(req, res, next) {
+  try {
+    const baggageTypes = await models.BaggageType.findAll()
+    const baggageStatuses = await models.BaggageStatus.findAll()
+    return res.status(200).json({
+      success: true,
+      data: { baggageTypes, baggageStatuses },
+    })
+  } catch (error) {
+    return next(error)
+  }
+}
+
 async function getBaggageById(req, res, next) {
   try {
     const { id } = req.query
-    const flight = await models.Baggage.findByPk(id)
+    const baggage = await models.Baggage.findByPk(id)
     return res.status(200).json({
       success: true,
-      data: flight,
+      data: baggage,
     })
   } catch (error) {
     return next(error)
@@ -28,8 +41,13 @@ async function getBaggageById(req, res, next) {
 
 async function upsertBaggage(req, res, next) {
   try {
-    const flight = req.body
-    const updatedBaggage = await models.Baggage.upsert(flight)
+    const { baggageIds, baggageStatusId } = req.body
+    const updatedBaggage = await models.Baggage.update(
+      { baggageStatusId },
+      {
+        where: { id: baggageIds },
+      },
+    )
     return res.status(200).json({
       success: true,
       data: updatedBaggage,
@@ -51,4 +69,10 @@ async function deleteBaggage(req, res, next) {
   }
 }
 
-module.exports = { getBaggage, getBaggageById, upsertBaggage, deleteBaggage }
+module.exports = {
+  getBaggage,
+  getBaggageAux,
+  getBaggageById,
+  upsertBaggage,
+  deleteBaggage,
+}

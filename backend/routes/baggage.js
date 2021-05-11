@@ -5,11 +5,13 @@ const {
   getBaggageById,
   upsertBaggage,
   deleteBaggage,
+  getBaggageAux,
 } = require('../controllers/baggage')
 
 router.get(`/`, getBaggage)
-router.get(`/:id`, getBaggageById)
+router.get('/aux', getBaggageAux)
+router.get(`/byId`, getBaggageById)
 router.put(`/upsert`, upsertBaggage)
-router.delete(`/destroy/:id`, deleteBaggage)
+router.delete(`/destroy`, deleteBaggage)
 
 module.exports = router
