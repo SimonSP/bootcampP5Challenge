@@ -1,16 +1,16 @@
-#CHALLENGE PARA EL BOOTCAMP II PLATAFORMA 5
+# CHALLENGE PARA EL BOOTCAMP II PLATAFORMA 5
 
 - Necesitas tener una instalacion de npm o yarn (versiones estables).
 
 - Clonar el repositorio con ``, dirigirse a la raiz de backend y frontend y ejecutar en ambos directorios: `npm install`o`yarn install` en caso de usar YARN
 
-##BACKEND
+## BACKEND
 
 - Acceder al directorio con `cd backend`
 
 - Instalar las dependencias con `npm install` o `yarn install`
 
-- Crea en el root del directorio `backend` un archivo .env con el siguiente contenido de ejemplo y configura tus preferencias:
+- Crea en el root del directorio `backend` un archivo `.env` con el siguiente contenido de ejemplo y configura tus preferencias:
 
   ```
   #COMMON
@@ -30,13 +30,13 @@
 
 - Revisa los puertos en las variables de entorno y ejecuta `npm run dev` o `yarn dev` para iniciarlo en modo desarrollo o bien`npm start`
 
-##FRONTEND
+## FRONTEND
 
 - Acceder al directorio con `cd frontend`
 
 - Instalar las dependencias con `npm install` o `yarn install`
 
-- Puedes personalizar el puerto del backend al que se va a llamar creando un archivo .env en el root de la carpeta frontend con el siguiente contenido:
+- Puedes personalizar el puerto del backend al que se va a llamar creando un archivo `.env` en el root de la carpeta frontend con el siguiente contenido:
 
   `REACT_APP_API_URL=4000`
 
