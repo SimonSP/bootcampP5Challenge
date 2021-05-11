@@ -8,6 +8,7 @@ import {
   faSearch as search,
   faTrash as trash,
   faPlus as plus,
+  faCheck as check,
   faEdit as edit,
   faEye as eye,
   faMinus as minus,
@@ -24,6 +25,7 @@ import {
   border,
 } from 'styled-system'
 const icons = {
+  check,
   forgotten,
   truckLoading,
   suitcase,
