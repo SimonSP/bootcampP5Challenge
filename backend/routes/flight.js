@@ -1,12 +1,17 @@
 const express = require('express')
 const router = express.Router()
-const { getFlights } = require('../controllers/flight')
-//IMPORTING SUBROUTERS
-//const PassengerRouter = require('./passenger.js')
-
-//USING ROUTERS
-//Router.use('/passenger', PassengerRouter)
+const {
+  getFlights,
+  getFlightById,
+  validateFlight,
+  upsertFlight,
+  deleteFlight,
+} = require('../controllers/flight')
 
 router.get(`/`, getFlights)
+router.get(`/byId`, getFlightById)
+router.get(`/validate`, validateFlight)
+router.put(`/upsert`, upsertFlight)
+router.delete(`/destroy`, deleteFlight)
 
 module.exports = router

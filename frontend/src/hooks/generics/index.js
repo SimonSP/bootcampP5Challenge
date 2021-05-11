@@ -1,2 +1,2 @@
-import useStateWithMerge from './useStateWithMerge'
+import useStateWithMerge from './useStateWihMerge'
 export { useStateWithMerge }

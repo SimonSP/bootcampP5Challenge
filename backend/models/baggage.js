@@ -9,10 +9,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Baggage.belongsTo(models.Passenger, {
-        foreignKey: 'passengerId',
+      Baggage.belongsTo(models.PassengerHasFlight, {
+        foreignKey: 'passengerHasFlightId',
         target: 'id',
-        as: 'passenger',
+        as: 'passengerHasFlights',
       })
       Baggage.belongsTo(models.BaggageType, {
         foreignKey: 'baggageTypeId',

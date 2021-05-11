@@ -19,21 +19,21 @@ axiosInstance.interceptors.response.use(
       return Promise.reject(error)
     }
   },
-  (error) => Promise.reject(error),
+  (error) => {
+    return Promise.reject(error)
+  },
 )
 
 //-------- ENDPOINTS - API -------
-API.getUsers = () => axiosInstance.get(`/users`)
-API.getWorkflowPavilions = (payload) =>
-  axiosInstance.post(`/workflow/getPavilions`, payload)
 
-API.getSupplies = (divisionId) =>
-  axiosInstance.get(`/admin/getSupplies?divisionId=${divisionId}`)
+API.getPassengerFlights = () => axiosInstance.get(`/passenger/flights`)
+API.getAuxData = () => axiosInstance.get(`/baggage/aux`)
+API.getFlight = (code) => axiosInstance.get(`flight/validate?code=${code}`)
 
-API.updateOrCreateSupple = (payload) =>
-  axiosInstance.put(`/admin/updateOrCreateSupplie`, payload)
+API.updateBaggageStatus = (payload) =>
+  axiosInstance.put(`/baggage/upsert`, payload)
 
-API.deleteConsumable = (payload) =>
-  axiosInstance.delete(`/admin/deleteConsumable`, { data: payload })
+API.upsertPassenger = (payload) =>
+  axiosInstance.put(`/passenger/upsert`, payload)
 
 export default API

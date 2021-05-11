@@ -1,4 +1,4 @@
-const passengerControllers = require(`./division`)
+const passengerControllers = require(`./passenger`)
 
 module.exports = {
   ...passengerControllers,

@@ -9,11 +9,10 @@ import { Admin } from 'screens'
 function App() {
   return (
     <ThemeProvider>
+      <GlobalStyle />
       <ConfigProvider locale={esEs}>
         <Admin />
       </ConfigProvider>
-
-      <GlobalStyle />
     </ThemeProvider>
   )
 }

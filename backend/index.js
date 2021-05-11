@@ -3,6 +3,10 @@ const cors = require('cors')
 const morgan = require('morgan')
 const express = require('express')
 const router = require('./routes')
+const moment = require(`moment-timezone`)
+require(`moment/locale/es`)
+moment.tz.setDefault(process.env.TIMEZONE || `America/Santiago`)
+moment.locale(`es`)
 const { errorHandler, wrapErrors } = require(`./middlewares/errorHandling`)
 
 /* EXPRESS INSTANCE */
