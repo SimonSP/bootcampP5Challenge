@@ -2,7 +2,7 @@
 
 - Necesitas tener una instalacion de npm o yarn (versiones estables).
 
-- Clonar el repositorio con `git clone https://github.com/SimonSP/bootcampP5Challenge.git`, dirigirse a la raiz de backend y frontend y ejecutar en ambos directorios: `npm install`o`yarn install` en caso de usar YARN
+- Clonar el repositorio con `git clone https://github.com/SimonSP/bootcampP5Challenge.git`.
 
 ## BACKEND
 
@@ -43,3 +43,7 @@
 - Ejecuta `npm start` o `yarn start` para lanzar el cliente
 
 - La aplicacion en ReactJS deberia inicializarse en el puerto 3000, por el contrario, el servidor deberia correr en el puerto 4000
+
+## Dudas
+
+- Para dudas pueden dejarme un correo
