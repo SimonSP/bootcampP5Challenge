@@ -44,6 +44,23 @@
 
 - La aplicacion en ReactJS deberia inicializarse en el puerto 3000, por el contrario, el servidor deberia correr en el puerto 4000
 
-## Dudas
+## Uso y dudas
+
+- Se puede crear usuarios asignandolos a vuelos predefinidos (existen vuelos disponibles y no disponibles)
+
+- Los codigos de vuelo con los que se puede probar la aplicacion son los siguientes:
+
+```
+A1D01
+A1D02
+A1D03
+A1D04
+A1D05
+A1D06
+A1D07
+A1D08
+A1D09
+A1D10
+```
 
 - Para dudas pueden dejarme un correo
