@@ -2,7 +2,7 @@
 
 - Necesitas tener una instalacion de npm o yarn (versiones estables).
 
-- Clonar el repositorio con ``, dirigirse a la raiz de backend y frontend y ejecutar en ambos directorios: `npm install`o`yarn install` en caso de usar YARN
+- Clonar el repositorio con `git clone https://github.com/SimonSP/bootcampP5Challenge.git`, dirigirse a la raiz de backend y frontend y ejecutar en ambos directorios: `npm install`o`yarn install` en caso de usar YARN
 
 ## BACKEND
 
